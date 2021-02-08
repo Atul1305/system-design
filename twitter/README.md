@@ -56,7 +56,7 @@ Note: Any user with 1M+ followers is celebrity.
 	-> Volume of Tweets
 	-> Timetaken to generate Tweets
 	
-Solution: STORM Apache Kafka Streams/Heron
+Solution: Apache STORM/Kafka Streams/Heron
 
 # Architecture
 	-> Filter (Kafka Queue) - Do filteration and Violations check
@@ -66,7 +66,16 @@ Solution: STORM Apache Kafka Streams/Heron
 	-> Count Hashtag
 	-> Rank
 	-> Redis
+	
+Inverted full-text index.
+
+Cassandra: for some kind of analysis.
 
 # References
 https://redislabs.com/blog/redis-mysql-fast-economic-scaling/
 https://www.youtube.com/watch?v=wYk0xPP_P_8
+
+# Question(s)
+1. How to map geolocation specific data?
+2. Http Push Web-Socket for Mobile devices?
+3. Zoo-Keeper? Works as master to maintain data consistency between multiple redis nodes.
