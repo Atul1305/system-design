@@ -4,7 +4,7 @@
 # Requirements
 **Functional**
 
-* Given a user's location in searchradius as inputs, return all businesses within the search radius. Yelp is example of this use case.
+* Given a user's location in search radius as inputs, return all businesses within the search radius. Yelp is example of this use case.
 * Business owners can add, update and delete a business. These changes no need to appear in real time, might take some time to appear.
 * Users can see detailed view about a business
 
@@ -59,7 +59,7 @@ How much storage to hold for 200M users?
         - lattitude
         - longitude
     - Geospatial Index
-        - location
+        - location - can be told as geohash
         - business_id
 
 **HLD**
@@ -76,8 +76,11 @@ How much storage to hold for 200M users?
     - The changes do not need to reflect real time.
     - Performs write operation in **Primary Database**
 
-* What database to use to power the location search?
-- 
+
+- One idea to design, build indexes on latitude and longitude.
+- Two approach for geospatial indexing.
+    - Hash -> Even Grid, Geohash(Keep diving whole world in smaller grid, start by dividing whole world with 4 quadrants) and Cartesian Tiers
+    - Tree -> QuadTree, Google S2 and Rtree
     
 
 
@@ -86,7 +89,8 @@ How much storage to hold for 200M users?
 
 
 # Databases
-
+* What database to use to power the location search?
+- GIS from redis
 
 # Architecture
 

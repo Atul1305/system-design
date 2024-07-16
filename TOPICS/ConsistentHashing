@@ -1,0 +1,2 @@
+We perform the modulo operation on the Hash against a number of servers. 
+This determines the which servers object belongs to. As long as the number of server remains the same.
